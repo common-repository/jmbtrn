@@ -1,0 +1,45 @@
+{
+	"name": "sortabrilliant/jumbotron",
+	"category": "common",
+	"attributes": {
+		"videos": {
+			"type": "array",
+			"default": [],
+			"source": "query",
+			"selector": "ul.jumbotron-gallery .jumbotron-gallery-item",
+			"query": {
+				"id": {
+					"source": "attribute",
+					"selector": "a",
+					"attribute": "data-id"
+				},
+				"title": {
+					"type": "string",
+					"source": "text",
+					"selector": "a"
+				},
+				"url": {
+					"source": "attribute",
+					"selector": "a",
+					"attribute": "href"
+				},
+				"description": {
+					"source": "attribute",
+					"selector": "a",
+					"attribute": "data-desc"
+				},
+				"poster": {
+					"type": "string",
+					"source": "attribute",
+					"selector": "a",
+					"attribute": "data-poster"
+				},
+				"fileLength": {
+					"type": "string",
+					"source": "text",
+					"selector": ".jumbotron-gallery-item__time"
+				}
+			}
+		}
+	}
+}
